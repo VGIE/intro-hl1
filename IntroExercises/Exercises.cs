@@ -45,7 +45,7 @@ namespace IntroExercises
                 return -1;
             }
 
-            for(int i = startIndex; i<endIndex: i++){
+            for(int i = startIndex; i<endIndex; i++){
                 if(array[i] == value){
                     return i;
                 }
@@ -81,7 +81,7 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
-            if(A.length == B.lentgth){
+            if(A.Length == B.Length){
                 
             }
         }
