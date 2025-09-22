@@ -80,10 +80,23 @@ namespace IntroExercises
         //  AreEqual(new int[] { 1, 1, 2}, null) => false
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
-        {
-            if(A.length == B.lentgth){
-                
+        {   
+            bool equal = false;
+            int[] contadorA;
+            int[] contadorB;
+            if(A.length == B.length){
+                for(int i = 0; i<A.length; i++){
+                    contadorA = count(A, A[i], i, A.Length);
+                    contadorB = count(B, B[i], i, B.Length);
+                }
+                if(contadorA == contadorB){
+                    equal = true;
+                }
+                else{
+                    equal = false;
+                }
             }
+            return equal;
         }
     }
 }
