@@ -12,7 +12,7 @@ namespace IntroExercises
         //Find should return the position in array where value appears for the first time. -1 if the value isn't found or the array is empty/null
         public static int Find(int[] array, int value)
         {
-            for(int i = 0; i<array.length; i++){
+            for(int i = 0; i<array.Length; i++){
                 if(array[i] == value){
                     return 1;
                 }
@@ -23,16 +23,34 @@ namespace IntroExercises
         //TODO #2
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
-        {
-            return 0;
+        {   
+            if(array.Length == 0 || array == null){
+                return 0;
+            }
+            int number = 0;
+            for(int i = 0; i<array.Length; i++){
+                if(array[i] == value){
+                    number++;
+                }
+            }
+            return number;
         }
 
         //TODO #3
         //Find should return the position in array where value appears for the first time between positions [startIndex,endIndex]. -1 if the value isn't found or the array is empty/null
         //-1 if endIndex is less than startIndex or any of them is outside the array
         public static int Find(int[] array, int value, int startIndex, int endIndex)
-        {
-            return 0;
+        {   
+            if(endIndex > array.Length || startIndex > endIndex || startIndex < 0 || endIndex < 0 || array.Length == 0 || array == null){
+                return -1;
+            }
+
+            for(int i = startIndex; i<endIndex: i++){
+                if(array[i] == value){
+                    return i;
+                }
+            }
+            return -1;
         }
 
         //TODO #4
@@ -40,8 +58,17 @@ namespace IntroExercises
         //0 if endIndex is less than startIndex or any of them is outside the array
 
         public static int Count(int[] array, int value, int startIndex, int endIndex)
-        {
-            return 0;
+        {   
+             int number = 0;
+            if(endIndex > array.Length || startIndex > endIndex || startIndex < 0 || endIndex < 0 || array.Length == 0 || array == null){
+                return -1;
+            }
+            for(int i = startIndex; i<endIndex; i++){
+                if(array[i] == value){
+                    number++;
+                }
+            }
+            return number;
         }
 
         //TODO #5
@@ -54,7 +81,9 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
-            return true;
+            if(A.length == B.lentgth){
+                
+            }
         }
     }
 }
